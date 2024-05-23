@@ -1,0 +1,22 @@
+.loading_cat {
+  width: 50px;
+  height: 50px;
+  background: url("../assets/images/loading.png");
+  background-size: cover;
+}
+
+.banner {
+  animation: pulse 1500ms infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    margin-top: -30px;
+  }
+  50% {
+    margin-top: 30px;
+  }
+  100% {
+    margin-top: -30px;
+  }
+}
