@@ -16,7 +16,7 @@ export default function Overlay({ isActive, children, onClose }: Props) {
       } ${styles.root}`}
     >
       {onClose && (
-        <div className="flex justify-end">
+        <div className="flex lg:justify-end justify-start p-4">
           <Button color="orange" onClick={onClose}>
             Exit
           </Button>

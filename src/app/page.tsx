@@ -17,13 +17,13 @@ export default function Home() {
   const [isActiveGames, setIsActiveGames] = useState(false);
 
   return (
-    <main className="h-[100vh] w-[100vw] overflow-hidden relative">
+    <main className="h-[100vh] w-[100vw] overflow-x-hidden relative">
       <Overlay isActive={isActiveGames} onClose={() => setIsActiveGames(false)}>
         <FlappyCatGame />
       </Overlay>
       <section>
-        <div className="w-full p-4 mt-10 flex items-start justify-center gap-4 relative">
-          <div className="h-[420px]">
+        <div className="w-full p-4 mt-10 flex flex-wrap items-start justify-center gap-4 relative">
+          <div className="lg:h-[420px] h-[380px]">
             <Image
               className={`${styles.banner} rounded-xl`}
               width={500}
@@ -32,7 +32,7 @@ export default function Home() {
               alt={"banner"}
             />
           </div>
-          <div className="w-1/4 mt-10 flex flex-col gap-4">
+          <div className="lg:w-1/4 mt-10 flex flex-col gap-4">
             <div>
               <p className="text text-2xl font-bold">
                 Welcome to the &#34;Unicorn Cat&#34; project!

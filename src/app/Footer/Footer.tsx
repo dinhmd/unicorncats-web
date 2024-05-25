@@ -28,7 +28,7 @@ export default function Footer() {
     anime({
       targets: cat,
       translateX: () => Math.random() * window.innerWidth,
-      translateY: () => Math.random() * (window.innerHeight - 420 - 80),
+      translateY: () => Math.random() * (window.innerHeight - 420 - 160),
       duration: () => Math.random() * 3000 + 1000,
       easing: "easeInOutQuad",
       complete: () => animate(cat),
@@ -39,9 +39,9 @@ export default function Footer() {
     <div
       ref={ref}
       style={{
-        height: "calc(100vh - 420px - 80px)",
+        height: "calc(100vh - 420px - 120px)",
       }}
-      className="w-full relative overflow-x-hidden overflow-y-hidden"
+      className="w-full relative overflow-x-hidden overflow-y-visible"
     />
   );
 }
