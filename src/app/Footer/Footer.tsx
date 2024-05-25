@@ -1,30 +1,7 @@
-import Image from "next/image";
-import FlyCat from "@/assets/images/fly_cat.svg";
-import styles from "./index.module.css";
-import {
-  Fragment,
-  ReactNode,
-  createElement,
-  createRef,
-  useEffect,
-  useRef,
-} from "react";
+import FlyCat from "@/assets/images/cats/fly_cat.svg";
 import anime from "animejs";
-
-const cats: { src: string; top: number }[] = [
-  {
-    src: FlyCat,
-    top: 0,
-  },
-  {
-    src: FlyCat,
-    top: 60,
-  },
-  {
-    src: FlyCat,
-    top: 120,
-  },
-];
+import { createRef, useEffect } from "react";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   const ref = createRef<HTMLDivElement>();

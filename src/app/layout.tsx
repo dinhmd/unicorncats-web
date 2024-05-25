@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Unicorn Cats",
   icons: {
     icon: "/favicons/favicon.ico",
-    shortcut: "/favicons/favicon-16x16.png",
+    shortcut: "/favicons/favicon-16x16.ico",
   },
   robots: { index: true, follow: true },
 };
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ggFont.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

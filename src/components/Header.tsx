@@ -1,7 +1,7 @@
 import { Button } from "./Button";
 import Image from "next/image";
 
-import Logo from "../assets/images/fly_cat.svg";
+import Logo from "../assets/images/cats/fly_cat.svg";
 
 export default function Header() {
   return (

@@ -9,7 +9,7 @@
 .cat_fly {
   width: 50px;
   height: 50px;
-  background-image: url("../../assets/images/fly_cat.svg");
+  background-image: url("../../assets/images/cats/fly_cat.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;

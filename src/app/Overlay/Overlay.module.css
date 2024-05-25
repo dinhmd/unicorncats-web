@@ -1,0 +1,12 @@
+.root {
+  transform: translateY(-100vh);
+  transition: transform 300ms ease-in-out;
+}
+
+.active_overlay {
+  transform: translateY(0);
+}
+
+.close_overlay {
+  transform: translateY(-100vh);
+}
