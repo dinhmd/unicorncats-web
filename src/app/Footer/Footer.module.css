@@ -1,3 +1,9 @@
+.footer {
+  background: url("../../assets/images/flappy/BG.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
 .fly {
   position: absolute;
   left: -50px;

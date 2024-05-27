@@ -1,7 +1,8 @@
-import FlyCat from "@/assets/images/cats/fly_cat.svg";
 import anime from "animejs";
 import { createRef, useEffect } from "react";
 import styles from "./Footer.module.css";
+
+const beeCatSize = 10;
 
 export default function Footer() {
   const ref = createRef<HTMLDivElement>();
@@ -18,7 +19,7 @@ export default function Footer() {
   }
 
   useEffect(() => {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < beeCatSize; i++) {
       const bee = createCat();
       animate(bee);
     }
@@ -39,9 +40,9 @@ export default function Footer() {
     <div
       ref={ref}
       style={{
-        height: "calc(100vh - 420px - 120px)",
+        height: "calc(100vh - 420px - 110px)",
       }}
-      className="w-full relative overflow-x-hidden overflow-y-visible"
+      className={`${styles.footer} w-full relative overflow-x-hidden overflow-y-visible`}
     />
   );
 }
