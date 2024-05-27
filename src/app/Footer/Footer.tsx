@@ -2,7 +2,7 @@ import anime from "animejs";
 import { createRef, useEffect } from "react";
 import styles from "./Footer.module.css";
 
-const beeCatSize = 10;
+const beeCatSize = 5;
 
 export default function Footer() {
   const ref = createRef<HTMLDivElement>();
