@@ -20,7 +20,6 @@
   background-repeat: no-repeat;
   position: absolute;
 }
-
 @keyframes fly1 {
   0% {
     left: -50px;

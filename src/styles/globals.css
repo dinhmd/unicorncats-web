@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #fcf6bd;
+  --background-color: #023047;
   --header-background-color: #ff99c8;
   --header-text-color: #000;
   --content-text-color: #5f9ea0;
@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  background: var(--background-color);
+  background: linear-gradient(to top, #edf6f9 70%, #9d8dc4);
 }
 
 .text {

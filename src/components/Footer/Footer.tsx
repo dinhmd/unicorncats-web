@@ -7,7 +7,7 @@ const beeCatSize = 5;
 export default function Footer() {
   const ref = createRef<HTMLDivElement>();
 
-  function createCat() {
+  function createCat(index: number) {
     const cat = document.createElement("div");
     cat.classList.add(`${styles.cat_fly}`);
     cat.style.top = `0`;
@@ -20,7 +20,7 @@ export default function Footer() {
 
   useEffect(() => {
     for (let i = 0; i < beeCatSize; i++) {
-      const bee = createCat();
+      const bee = createCat(i);
       animate(bee);
     }
   }, []);

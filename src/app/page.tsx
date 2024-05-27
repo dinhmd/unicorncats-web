@@ -8,10 +8,11 @@ import UnicornCat from "@/assets/images/cats/unicorn_cat.svg";
 import Image from "next/image";
 import Banner from "@/assets/images/cats/fly_cat.svg";
 import styles from "./app.module.css";
-import Footer from "./Footer/Footer";
-import Overlay from "./Overlay/Overlay";
+import Footer from "@/components/Footer/Footer";
+import Overlay from "@/components/Overlay/Overlay";
 import { useState } from "react";
 import FlappyCatGame from "./Games/FlappyCatV2";
+import Header from "@/components/Header/Header";
 
 export default function Home() {
   const [isActiveGames, setIsActiveGames] = useState(false);
@@ -22,6 +23,7 @@ export default function Home() {
         <FlappyCatGame />
       </Overlay>
       <section>
+        <Header />
         <div className="w-full p-4 mt-10 flex flex-wrap items-start justify-center gap-4 relative">
           <div className="lg:h-[420px] h-[380px]">
             <Image
