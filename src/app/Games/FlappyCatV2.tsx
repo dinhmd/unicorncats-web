@@ -15,7 +15,7 @@ import { cloneDeep } from "lodash";
 
 // Constants and utilities
 const RAD = Math.PI / 180;
-const DX = 2;
+const DX = 3;
 const PipeGap = 85;
 
 type Bird = {
@@ -301,8 +301,8 @@ const FlappyCatGame = () => {
 
     if (context) {
       const gradient = context.createLinearGradient(0, 0, 0, canvas.height / 2);
-      gradient.addColorStop(0, "#30c0df");
-      gradient.addColorStop(1, "#fcf6bd");
+      gradient.addColorStop(0, "#74dcf7");
+      gradient.addColorStop(1, "#f0de7b");
       context.fillStyle = gradient;
       context.fillRect(0, 0, canvas.width, canvas.height);
       drawBackground(context);
@@ -314,7 +314,14 @@ const FlappyCatGame = () => {
   };
 
   const drawBackground = (context: CanvasRenderingContext2D) => {
-    context.drawImage(images.current.bg, 0, 0);
+    if (!canvasRef.current) return;
+    context.drawImage(
+      images.current.bg,
+      0,
+      canvasRef.current.height / 3,
+      canvasRef.current.width,
+      canvasRef.current.height - images.current.ground.height
+    );
   };
 
   const drawPipes = (context: CanvasRenderingContext2D) => {
@@ -344,10 +351,13 @@ const FlappyCatGame = () => {
 
   const drawGround = (context: CanvasRenderingContext2D) => {
     if (!canvasRef.current) return;
+    console.log(gnd.x);
     context.drawImage(
       images.current.ground,
       gnd.x,
-      canvasRef.current.height - images.current.ground.height
+      canvasRef.current.height - images.current.ground.height,
+      images.current.ground.width + 80,
+      images.current.ground.height
     );
   };
 
@@ -432,8 +442,8 @@ const FlappyCatGame = () => {
       className="outline-none rounded-md"
       ref={canvasRef}
       id="canvas"
-      width="276"
-      height="414"
+      width="356"
+      height="494"
       onClick={handleGameAction}
       tabIndex={1}
     />

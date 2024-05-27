@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #fcf6bd;
-  --header-background-color: #ff99c8;
+  --background-color-light: #edf6f9;
+  --background-color-dark: #9d8dc4;
+  --header-background-color: #9d8dc4;
   --header-text-color: #000;
   --content-text-color: #5f9ea0;
 }
@@ -32,7 +33,11 @@ html {
 }
 
 body {
-  background: var(--background-color);
+  background: linear-gradient(
+    to top,
+    var(--background-color-light) 70%,
+    var(--background-color-dark)
+  );
 }
 
 .text {
